@@ -1,0 +1,280 @@
+CREATE DATABASE IF NOT EXISTS db_euro_soccer
+COLLATE utf8mb4_general_ci
+CHARSET utf8mb4;
+
+USE db_euro_soccer;
+
+CREATE TABLE IF NOT EXISTS tb_soccer_country(
+	country_id INTEGER AUTO_INCREMENT NOT NULL,
+    country_abbr VARCHAR(4) NOT NULL,
+    country_name VARCHAR(40) NOT NULL,
+CONSTRAINT pk_country_id
+	PRIMARY KEY(country_id)
+)AUTO_INCREMENT = 1201;
+
+CREATE TABLE IF NOT EXISTS tb_soccer_city(
+	city_id INTEGER AUTO_INCREMENT NOT NULL,
+    city VARCHAR(25) NOT NULL,
+    country_id INTEGER NOT NULL,
+CONSTRAINT pk_city_id
+	PRIMARY KEY(city_id),
+CONSTRAINT fk_tb_soccer_city_tb_soccer_country
+	FOREIGN KEY(country_id)
+    REFERENCES tb_soccer_country(country_id)
+)AUTO_INCREMENT = 10001;
+
+CREATE TABLE IF NOT EXISTS tb_soccer_venue(
+	venue_id INTEGER AUTO_INCREMENT NOT NULL,
+    venue_name VARCHAR(30) NOT NULL,
+    city_id INTEGER NOT NULL,
+    aud_capacity INTEGER NOT NULL,
+CONSTRAINT pk_venue_id
+	PRIMARY KEY(venue_id),
+CONSTRAINT fk_tb_soccer_venue_tb_soccer_city
+	FOREIGN KEY(city_id)
+    REFERENCES tb_soccer_city(city_id)
+)AUTO_INCREMENT = 20001;
+
+CREATE TABLE IF NOT EXISTS tb_soccer_team(
+	team_id INTEGER NOT NULL,
+    team_group CHAR(1) NOT NULL,
+    match_played INTEGER NOT NULL,
+    won INTEGER NOT NULL,
+    draw INTEGER NOT NULL,
+    lost INTEGER NOT NULL,
+    goal_for INTEGER NOT NULL,
+    goal_agnst INTEGER NOT NULL,
+    goal_diff INTEGER NOT NULL,
+    points INTEGER NOT NULL,
+    group_position INTEGER NOT NULL,
+CONSTRAINT fk_tb_soccer_team_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id)
+)AUTO_INCREMENT = 1201;
+
+CREATE TABLE IF NOT EXISTS tb_playing_position(
+	position_id VARCHAR(2) NOT NULL,
+    position_desc VARCHAR(15) NOT NULL,
+CONSTRAINT pk_position_id
+	PRIMARY KEY(position_id)
+);
+
+CREATE TABLE IF NOT EXISTS tb_player_mast(
+	player_id INTEGER AUTO_INCREMENT NOT NULL,
+    team_id INTEGER NOT NULL,
+    jersey_no INTEGER NOT NULL,
+    player_name VARCHAR(40) NOT NULL,
+    posi_to_play CHAR(2) NOT NULL,
+    dt_of_bir DATE NOT NULL,
+	age INTEGER NOT NULL,
+    playing_club VARCHAR(40) NOT NULL,
+CONSTRAINT pk_player_id
+	PRIMARY KEY(player_id),
+CONSTRAINT fk_tb_player_mast_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_player_mast_tb_playing_position
+	FOREIGN KEY(posi_to_play)
+    REFERENCES tb_playing_position(position_id)
+)AUTO_INCREMENT = 160001;
+
+CREATE TABLE IF NOT EXISTS tb_referee_mast(
+	referee_id INTEGER AUTO_INCREMENT NOT NULL,
+    referee_name VARCHAR(40) NOT NULL,
+    country_id INTEGER NOT NULL,
+CONSTRAINT pk_referee_id
+	PRIMARY KEY(referee_id),
+CONSTRAINT fk_tb_referee_mast_tb_soccer_country
+	FOREIGN KEY(country_id)
+    REFERENCES tb_soccer_country(country_id)
+)AUTO_INCREMENT = 70001;
+
+CREATE TABLE IF NOT EXISTS tb_match_mast(
+	match_no INTEGER NOT NULL,
+    play_stage CHAR(1) NOT NULL,
+    play_date DATE NOT NULL,
+    results CHAR(5) NOT NULL,
+    decided_by CHAR(1) NOT NULL,
+    goal_score CHAR(5) NOT NULL,
+    venue_id INTEGER NOT NULL,
+    referee_id INTEGER NOT NULL,
+    audence INTEGER NOT NULL,
+    plr_of_match INTEGER NOT NULL,
+    stop1_sec INTEGER NOT NULL,
+    stop2_sec INTEGER NOT NULL,
+CONSTRAINT pk_match_no
+	PRIMARY KEY(match_no),
+CONSTRAINT fk_tb_match_mast_tb_soccer_venue
+	FOREIGN KEY(venue_id)
+    REFERENCES tb_soccer_venue(venue_id),
+CONSTRAINT fk_tb_match_mast_tb_referee_mast
+	FOREIGN KEY(referee_id)
+    REFERENCES tb_referee_mast(referee_id),
+CONSTRAINT fk_tb_match_mast_tb_player_mast
+	FOREIGN KEY(plr_of_match)
+    REFERENCES tb_player_mast(player_id)
+)AUTO_INCREMENT = 1;
+
+CREATE TABLE IF NOT EXISTS tb_coach_mast(
+	coach_id INTEGER AUTO_INCREMENT NOT NULL,
+    coach_name VARCHAR(40) NOT NULL,
+CONSTRAINT pk_coach_id
+	PRIMARY KEY(coach_id)
+)AUTO_INCREMENT = 5550;
+
+CREATE TABLE IF NOT EXISTS tb_asst_referee_mast(
+	ass_ref_id INTEGER AUTO_INCREMENT NOT NULL,
+    ass_ref_name VARCHAR(40) NOT NULL,
+    country_id INTEGER NOT NULL,
+CONSTRAINT pk_ass_ref_id
+	PRIMARY KEY(ass_ref_id),
+CONSTRAINT fk_tb_asst_referee_mast_tb_soccer_country
+	FOREIGN KEY(country_id)
+    REFERENCES tb_soccer_country(country_id)
+)AUTO_INCREMENT = 80001;
+
+CREATE TABLE IF NOT EXISTS tb_match_details(
+	match_no INTEGER NOT NULL,
+    play_stage VARCHAR(1) NOT NULL,
+    team_id INTEGER NOT NULL,
+    win_loos VARCHAR(1) NOT NULL,
+    decided_by VARCHAR(1) NOT NULL,
+    goal_score INTEGER NOT NULL,
+    penalty_score INTEGER,
+    ass_ref INTEGER NOT NULL,
+    player_gk INTEGER NOT NULL,
+CONSTRAINT fk_tb_match_details_tb_match_mast
+	FOREIGN KEY(match_no)
+    REFERENCES tb_match_mast(match_no),
+CONSTRAINT fk_tb_match_details_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_match_details_tb_asst_referee_mast
+	FOREIGN KEY(ass_ref)
+    REFERENCES tb_asst_referee_mast(ass_ref_id),
+CONSTRAINT fk_tb_match_details_tb_player_mast
+	FOREIGN KEY(player_gk)
+    REFERENCES tb_player_mast(player_id)
+);
+
+CREATE TABLE IF NOT EXISTS tb_goal_details(
+	goal_id INTEGER AUTO_INCREMENT NOT NULL,
+    match_no INTEGER NOT NULL,
+    player_id INTEGER NOT NULL,
+    team_id INTEGER NOT NULL,
+    goal_time INTEGER NOT NULL,
+    goal_type CHAR(1) NOT NULL,
+    play_stage CHAR(1) NOT NULL,
+    goal_schedule CHAR(2) NOT NULL,
+    goal_half INTEGER NOT NULL,
+CONSTRAINT pk_goal_id
+	PRIMARY KEY(goal_id),
+CONSTRAINT fk_tb_goal_details_tb_match_mast
+	FOREIGN KEY(match_no)
+    REFERENCES tb_match_mast(match_no),
+CONSTRAINT fk_tb_goal_details_tb_player_mast
+	FOREIGN KEY(player_id)
+    REFERENCES tb_player_mast(player_id),
+CONSTRAINT fk_tb_goal_details_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id)
+)AUTO_INCREMENT = 1;
+
+CREATE TABLE IF NOT EXISTS tb_penalty_shootout(
+	kick_id INTEGER AUTO_INCREMENT NOT NULL,
+    match_no INTEGER NOT NULL,
+    team_id INTEGER NOT NULL,
+    player_id INTEGER NOT NULL,
+    score_goal VARCHAR(1) NOT NULL,
+    kick_no INTEGER NOT NULL,
+CONSTRAINT pk_kick_id
+	PRIMARY KEY(kick_id),
+CONSTRAINT fk_tb_penalty_shootout_tb_match_mast
+	FOREIGN KEY(match_no)
+    REFERENCES tb_match_mast(match_no),
+CONSTRAINT fk_tb_penalty_shootout_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_penalty_shootout_tb_player_mast
+	FOREIGN KEY(player_id)
+    REFERENCES tb_player_mast(player_id)
+)AUTO_INCREMENT = 1;
+
+CREATE TABLE IF NOT EXISTS tb_player_booked(
+	match_no INTEGER NOT NULL,
+    team_id INTEGER NOT NULL,
+    player_id INTEGER NOT NULL,
+    booking_time VARCHAR(40) NOT NULL,
+    sent_off CHAR(1),
+    play_schedule CHAR(2) NOT NULL,
+    play_half INTEGER NOT NULL,
+CONSTRAINT fk_tb_player_booked_tb_match_mast
+	FOREIGN KEY(match_no)
+    REFERENCES tb_match_mast(match_no),
+CONSTRAINT fk_tb_player_booked_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_player_booked_tb_player_mast
+	FOREIGN KEY(player_id)
+    REFERENCES tb_player_mast(player_id)
+);
+
+CREATE TABLE IF NOT EXISTS tb_player_in_out(
+	match_no INTEGER NOT NULL,
+    team_id INTEGER NOT NULL,
+    player_id INTEGER NOT NULL,
+    in_out CHAR(1) NOT NULL,
+    time_in_out INTEGER NOT NULL,
+    play_schedule CHAR(2) NOT NULL,
+    play_half INTEGER NOT NULL,
+CONSTRAINT fk_tb_player_in_out_tb_match_mast
+	FOREIGN KEY(match_no)
+    REFERENCES tb_match_mast(match_no),
+CONSTRAINT fk_tb_player_in_out_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_player_in_out_tb_player_mast
+	FOREIGN KEY(player_id)
+    REFERENCES tb_player_mast(player_id)
+);
+
+CREATE TABLE IF NOT EXISTS tb_match_capitain(
+	match_no INTEGER NOT NULL,
+    team_id INTEGER NOT NULL,
+    player_captain INTEGER NOT NULL,
+CONSTRAINT fk_tb_match_capitain_tb_match_mast
+	FOREIGN KEY(match_no)
+    REFERENCES tb_match_mast(match_no),
+CONSTRAINT fk_tb_match_capitain_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_match_capitain_tb_player_mast
+	FOREIGN KEY(player_captain)
+    REFERENCES tb_player_mast(player_id)
+);
+
+CREATE TABLE IF NOT EXISTS tb_team_coaches(
+	team_id INTEGER NOT NULL,
+    coach_id INTEGER NOT NULL,
+CONSTRAINT fk_tb_team_coaches_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_team_coaches_tb_coach_mast
+	FOREIGN KEY(coach_id)
+    REFERENCES tb_coach_mast(coach_id)
+);
+
+CREATE TABLE IF NOT EXISTS tb_penalty_gk(
+	match_no INTEGER NOT NULL,
+    team_id INTEGER NOT NULL,
+    player_gk INTEGER NOT NULL,
+CONSTRAINT fk_tb_penalty_gk_tb_match_mast
+	FOREIGN KEY(match_no)
+    REFERENCES tb_match_mast(match_no),
+CONSTRAINT fk_tb_penalty_gk_tb_soccer_country
+	FOREIGN KEY(team_id)
+    REFERENCES tb_soccer_country(country_id),
+CONSTRAINT fk_tb_penalty_gk_tb_player_mast
+	FOREIGN KEY(player_gk)
+    REFERENCES tb_player_mast(player_id)
+);
