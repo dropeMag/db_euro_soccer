@@ -1,0 +1,131 @@
+# How manay venues are there in EURO CUP 2016?
+SELECT COUNT(venue_id) as count
+FROM tb_soccer_venue;
+
+
+# How many countries are participating?
+SELECT COUNT(DISTINCT team_id)
+FROM tb_player_mast;
+
+
+# The number of goals scored within normal play
+SELECT COUNT(goal_id)
+FROM tb_goal_details;
+
+
+# The number of matches that ended with a result
+SELECT COUNT(match_no)
+FROM tb_match_mast
+WHERE results = 'win';
+
+
+# The number of matches that ended in draws
+SELECT COUNT(match_no)
+FROM tb_match_mast
+WHERE results = 'draw';
+
+
+# When the Football EURO CUP 2016 began
+SELECT MIN(play_date) AS beginning_date
+FROM tb_match_mast;
+
+
+# The number of self-goals scored
+SELECT COUNT(goal_id)
+FROM tb_goal_details
+WHERE goal_type = 'o';
+
+
+# The number of matches ended with a results in-group stage
+SELECT COUNT(match_no)
+FROM tb_match_mast
+WHERE play_stage = 'g' AND
+	  results = 'win';
+
+
+# The number of matches that resulted in a penalty shootout
+SELECT COUNT(DISTINCT match_no) as count
+FROM tb_penalty_shootout;
+
+
+# The number of matches decided by penalties in the Round of 16 stage
+SELECT COUNT(match_no)
+FROM tb_match_mast
+WHERE decided_by = 'p' AND
+	  play_stage = 'r';
+
+
+# The number of goals scored in every match within a normal play schedule. Sort the result-set on match number
+# Return match number and number of goal scored
+SELECT
+	DISTINCT match_no,
+    COUNT(goal_id) AS count
+FROM tb_goal_details
+WHERE goal_type = 'n'
+GROUP BY match_no;
+
+
+# Find the matches in which no stoppage time was added during the first half of play
+# Return match no, date of play and goal scored
+SELECT 
+	match_no,
+    play_date,
+    goal_score
+FROM tb_match_mast
+WHERE stop1_sec = 0;
+
+
+# Count the number of matches that ended in a goalless draw at the group stage
+# Return number of matches
+SELECT COUNT(DISTINCT match_no) as count
+FROM tb_match_details
+WHERE goal_score = 0 AND
+	  play_stage = 'g' AND
+      win_loos = 'd';
+
+
+# Calculate the number of matches that ended in a single goal win, excluding matches decided by penalty shootouts
+SELECT COUNT(DISTINCT match_no)
+FROM tb_match_details
+WHERE win_loos = 'w' AND
+	  decided_by != 'p' AND
+      goal_score = 1;
+
+
+# Count the number of players replaced in the tournament
+# Return number of players as "Player Replaced"
+SELECT ROUND(COUNT(match_no)/2) AS 'Player Replaced'
+FROM tb_player_in_out;
+
+
+# Count the total number of players replaced during normal playtime
+# Return number of players as "Player Replaced"
+SELECT ROUND(COUNT(match_no)/2) AS 'Player Replaced'
+FROM tb_player_in_out
+WHERE play_schedule = 'nt';
+
+
+# Count the total number of goalless draws played in the entire tournament
+SELECT COUNT(DISTINCT match_no) as goalless_draws
+FROM tb_match_details
+WHERE win_loos = 'd' AND
+	  goal_score = 0;
+
+
+# Count the number of substitutes during various stages of the tournament
+# Sort the result-set in ascending order by play-half, play-schedule and number of substitute happened
+# Return play-half, play-schedule, number of substitute happened
+SELECT
+	play_half,
+    play_schedule,
+    COUNT(match_no) AS count
+FROM tb_player_in_out
+WHERE in_out = 'o'
+GROUP BY play_half, play_schedule
+ORDER BY play_half ASC, play_schedule ASC, count ASC;
+
+
+# Count the number of shots taken in penalty shootouts matches
+# Number of shots as "Number of Penalty Kicks"
+SELECT COUNT(kick_id) AS 'Number of Penalty Kicks'
+FROM tb_penalty_shootout;
