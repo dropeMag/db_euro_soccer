@@ -129,3 +129,41 @@ ORDER BY play_half ASC, play_schedule ASC, count ASC;
 # Number of shots as "Number of Penalty Kicks"
 SELECT COUNT(kick_id) AS 'Number of Penalty Kicks'
 FROM tb_penalty_shootout;
+
+
+# Find the players with shot numbers they took in penalty shootout matches
+# Return match_no, Team, player_name, jersey_no, score_goal, kick_no
+SELECT
+	ps.match_no AS match_no,
+    sc.country_name AS Team,
+    pm.player_name AS player,
+    pm.jersey_no AS jersey_no,
+    ps.score_goal AS score_goal,
+    ps.kick_no AS kick_no
+FROM tb_soccer_country AS sc
+	INNER JOIN tb_penalty_shootout AS ps
+		ON sc.country_id = ps.team_id
+	INNER JOIN tb_player_mast AS pm
+		ON ps.player_id = pm.player_id;
+
+
+# Count the number of penalty shots taken by each team
+# Return country name, number of shots as "Number of Shots"
+SELECT
+	sc.country_name AS country,
+	COUNT(ps.kick_id) AS 'Number of Shots'
+FROM tb_soccer_country AS sc
+	INNER JOIN tb_penalty_shootout AS ps
+		ON sc.country_id = ps.team_id
+GROUP BY country;
+
+
+# Count the number of bookings in each half of play within the normal play schedule
+# Return play_half, play_schedule, number of booking happened
+SELECT
+	play_half,
+    play_schedule,
+    COUNT(match_no)
+FROM tb_player_booked
+WHERE play_schedule = 'nt'
+GROUP BY play_half, play_schedule;
