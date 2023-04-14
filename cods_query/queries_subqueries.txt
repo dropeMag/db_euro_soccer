@@ -1,0 +1,109 @@
+# Find out which teams played the first match of the 2016 Euro Cup
+SELECT
+	md.match_no,
+	sc.country_name
+FROM tb_match_details AS md
+	INNER JOIN tb_soccer_country AS sc
+		ON md.team_id = sc.countrY_id
+WHERE md.match_no = 1;
+
+
+# Find the winner of EURO cup 2016
+SELECT
+	sc.country_name AS country,
+	md.goal_score AS score
+FROM tb_match_details AS md
+	INNER JOIN tb_soccer_country AS sc
+		ON md.team_id = sc.country_id
+WHERE md.match_no = (SELECT MAX(match_no) FROM tb_match_details) AND
+	  md.win_loos = 'w';
+
+
+# Find the highest audience match
+# Return match_no, play_stage, goal_score, audience
+SELECT
+	match_no,
+    play_stage,
+    goal_score,
+    audence
+FROM tb_match_mast
+WHERE audence = (SELECT MAX(audence) FROM tb_match_mast);
+
+
+# Find the match number in which Germany played against Poland
+# Group the result set on match number
+SELECT
+	match_no
+FROM tb_match_details
+WHERE team_id = (SELECT country_id FROM tb_soccer_country WHERE country_name = 'Germany') OR
+	  team_id = (SELECT country_id FROM tb_soccer_country WHERE country_name = 'Poland')
+GROUP BY match_no
+	HAVING COUNT(match_no) = 2;
+
+
+# Find the result of the match where Portugal played against Hungary
+# Return match_no, play_stage, play_date, results, goal_score
+SELECT
+	md.match_no,
+    md.play_stage,
+    mm.play_date,
+    mm.results,
+    mm.goal_score
+FROM tb_match_details AS md
+	INNER JOIN tb_match_mast AS mm
+		ON md.match_no = mm.match_no
+WHERE team_id = (SELECT country_id FROM tb_soccer_country WHERE country_name = 'Portugal') OR
+	  team_id = (SELECT country_id FROM tb_soccer_country WHERE country_name = 'Hungary')
+GROUP BY md.match_no, md.play_stage, mm.play_date, mm.results, mm.goal_score
+	HAVING COUNT(md.match_no) = 2;
+
+
+# Find the players who scored the most goals in each match
+# Group the result set on match number, country name and player name
+# Sort the result-set in ascending order by match number
+# Return match number, country name, player name and number of matches
+SELECT
+	gd.match_no AS match_no,
+    sc.country_name AS country,
+    pm.player_name AS player,
+    COUNT(gd.goal_id) AS goals
+FROM tb_goal_details AS gd
+	INNER JOIN tb_soccer_country AS sc
+		ON gd.team_id = sc.country_id
+	INNER JOIN tb_player_mast AS pm
+		ON gd.player_id = pm.player_id
+GROUP BY match_no, country, player
+ORDER BY match_no;
+
+
+# Find the highest audience match
+# Return country name of the teams
+SELECT
+	DISTINCT sc.country_name
+FROM tb_goal_details AS gd
+	INNER JOIN tb_match_mast AS mm
+		ON gd.match_no = mm.match_no
+    INNER JOIN tb_soccer_country AS sc
+		ON gd.team_id = sc.country_id
+WHERE mm.audence = (SELECT MAX(audence) FROM tb_match_mast);
+
+
+# Find the second-highest stoppage time in the second half
+SELECT MAX(stop2_sec) AS max
+FROM tb_match_mast
+WHERE stop2_sec != (SELECT MAX(stop2_sec) FROM tb_match_mast);
+
+
+# Find the teams played the match where the second highest stoppage time had been added in the second half of play
+# Return country name of the teams
+SELECT sc.country_name
+FROM tb_soccer_country AS sc
+	INNER JOIN tb_match_details AS md
+		ON sc.country_id = md.team_id
+WHERE md.match_no = (SELECT match_no
+					 FROM tb_match_mast
+					 WHERE stop2_sec = (SELECT MAX(stop2_sec)
+										FROM tb_match_mast
+										WHERE stop2_sec != (SELECT MAX(stop2_sec) FROM tb_match_mast)));
+
+
