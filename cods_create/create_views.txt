@@ -1,0 +1,47 @@
+CREATE VIEW vw_general_players AS
+SELECT
+	country_name country,
+    player_name player,
+    jersey_no jersey,
+    posi_to_play position,
+    age,
+    playing_club club,
+	COUNT(goal_id) goals,
+    COUNT(kick_id) penalties,
+    COUNT(booking_time) bookings,
+    CASE
+		WHEN mp.player_captain IS NULL THEN '-'
+        ELSE 'Captain'
+	END captain,
+    coach_name coach
+FROM tb_player_mast pm
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+LEFT JOIN tb_goal_details gd
+	ON pm.player_id = gd.player_id
+LEFT JOIN tb_penalty_shootout ps
+	ON pm.player_id = ps.player_id
+LEFT JOIN tb_player_booked pb
+	ON pm.player_id = pb.player_id
+LEFT JOIN tb_match_captain mp
+	ON pm.player_id = mp.player_captain
+INNER JOIN tb_team_coaches tc
+	ON pm.team_id = tc.team_id
+INNER JOIN tb_coach_mast cm
+	ON tc.coach_id = cm.coach_id
+GROUP BY player, country, jersey, position, age, club, captain, coach;
+
+
+CREATE VIEW vw_general_venue AS
+SELECT
+	city,
+	venue_name,
+	COUNT(match_no) games_played,
+	aud_capacity,
+	ROUND(AVG(audence)) avarage_audence
+FROM tb_soccer_city sc
+INNER JOIN tb_soccer_venue sv
+	ON sc.city_id = sv.city_id
+INNER JOIN tb_match_mast mm
+	ON sv.venue_id = mm.venue_id
+GROUP BY venue_name, city, aud_capacity;
