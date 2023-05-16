@@ -15,9 +15,30 @@
 
 Original holder: [w3resource](https://www.w3resource.com/sql-exercises/soccer-database-exercise/index.php)
 
-This sample database will be used for training and SQL knowledge improvement.
+This is a sample database that contains data from the 2016 euro cup.
 
-The sample database represents some of the data storage based on EURO CUP 2016.
+The repository has creation codes, data insertions and queries.
+
+</br>
+
+
+# INDEX
+
+- [Index](#index)
+- [Logical Schema](#logical-schema)
+- [Tables](#tables)
+
+
+# LOGICAL SCHEMA
+
+
+# TABLES
+
+
+
+
+
+
 
 
 
