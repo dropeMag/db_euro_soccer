@@ -1,0 +1,415 @@
+# Find out where the final match of the EURO cup 2016 was played
+# Return venue name, city
+SELECT
+	sv.venue_name venue_name,
+    sc.city city
+FROM tb_soccer_venue sv
+INNER JOIN tb_soccer_city sc
+	ON sv.city_id = sc.city_id
+WHERE sv.venue_id = (SELECT venue_id
+					 FROM tb_match_mast
+                     WHERE play_stage = 'F');
+
+
+# Find the number of goals scored by each team in each match during normal play
+# Return match number, country name and goal score
+SELECT
+	md.match_no,
+    sc.country_name,
+    md.goal_score
+FROM tb_match_details md
+INNER JOIN tb_soccer_country sc
+	ON md.team_id = sc.country_id
+ORDER BY md.match_no;
+
+
+# Count the number of goals scored by each player within a normal play schedule
+# Group the result set on player name and country name and sorts the result-set according to the highest to the lowest scorer
+# Return player name, number of goals and country name
+SELECT
+	pm.player_name player,
+    COUNT(gd.goal_id) goals,
+    sc.country_name country
+FROM tb_player_mast pm
+INNER JOIN tb_goal_details gd
+	ON pm.player_id = gd.player_id
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+WHERE gd.goal_type = 'N'
+GROUP BY pm.player_name, sc.country_name
+ORDER BY COUNT(gd.goal_id) DESC, pm.player_name ASC;
+
+
+# Find out who scored the most goals in the 2016 Euro Cup
+# Return player name, country name and highest individual scorer
+SELECT
+	pm.player_name player,
+    sc.country_name country,
+    COUNT(gd.goal_id) goals
+FROM tb_player_mast pm
+INNER JOIN tb_goal_details gd
+	ON pm.player_id = gd.player_id
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+GROUP BY pm.player_name, sc.country_name
+HAVING COUNT(gd.goal_id) = (SELECT MAX(count_goals)
+							FROM (SELECT COUNT(*) count_goals
+								  FROM tb_goal_details
+                                  GROUP BY player_id) tb_count)
+ORDER BY pm.player_name;
+
+
+# Find out who scored in the final of the 2016 Euro Cup
+# Return player name, jersey number and country name
+SELECT
+	pm.player_name player,
+    pm.jersey_no jersey_no,
+	sc.country_name country
+FROM tb_player_mast pm
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+WHERE pm.player_id = (SELECT player_id
+					  FROM tb_goal_details
+                      ORDER BY goal_id DESC
+                      LIMIT 1);
+
+
+# Find out which country hosted the 2016 Football EURO Cup
+# Return country name
+SELECT
+	country_name
+FROM tb_soccer_country
+WHERE country_id in (SELECT country_id
+					 FROM tb_soccer_city);
+
+
+# find out who scored the first goal of the 2016 European Championship
+# Return player_name, jersey_no, country_name, goal_time, play_stage, goal_schedule, goal_half
+SELECT
+	pm.player_name player,
+    pm.jersey_no jersey_no,
+	sc.country_name country,
+    gd.goal_time,
+    gd.play_stage,
+    gd.goal_schedule,
+    gd.goal_half
+FROM tb_player_mast pm
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+INNER JOIN tb_goal_details gd
+	ON pm.player_id = gd.player_id
+WHERE gd.goal_id = 1;
+
+
+# Find the referee who managed the opening match
+# Return referee name, country name
+SELECT
+	rm.referee_name referee,
+    sc.country_name country
+FROM tb_referee_mast rm
+INNER JOIN tb_soccer_country sc
+	ON rm.country_id = sc.country_id
+WHERE rm.referee_id = (SELECT referee_id
+					   FROM tb_match_mast
+                       WHERE match_no = 1);
+
+
+# Find the referee who managed the final match
+# Return referee name, country name
+SELECT
+	rm.referee_name referee,
+    sc.country_name country
+FROM tb_referee_mast rm
+INNER JOIN tb_soccer_country sc
+	ON rm.country_id = sc.country_id
+WHERE rm.referee_id = (SELECT referee_id
+					   FROM tb_match_mast
+                       ORDER BY match_no DESC
+                       LIMIT 1);
+
+
+# Find the city where the opening match of EURO cup 2016 took place
+# Return venue name, city
+SELECT
+	sv.venue_name,
+    sc.city
+FROM tb_soccer_venue sv
+INNER JOIN tb_soccer_city sc
+	ON sv.city_id = sc.city_id
+WHERE venue_id = (SELECT venue_id
+				  FROM tb_match_mast
+                  WHERE match_no = 1);
+
+
+# Find out which stadium hosted the final match of the 2016 Euro Cup
+# Return venue_name, city, aud_capacity, audience
+SELECT
+	sv.venue_name,
+    sc.city,
+    sv.aud_capacity,
+    mm.audence
+FROM tb_soccer_venue sv
+INNER JOIN tb_soccer_city sc
+	ON sv.city_id = sc.city_id
+INNER JOIN tb_match_mast mm
+	ON sv.venue_id = mm.venue_id
+ORDER BY mm.match_no DESC
+LIMIT 1;
+
+
+# Count the number of matches played at each venue. Sort the result-set on venue name
+# Return Venue name, city, and number of matches
+SELECT
+	sv.venue_name venue,
+    sc.city city,
+    COUNT(mm.match_no)
+FROM tb_soccer_venue sv
+INNER JOIN tb_soccer_city sc
+    ON sv.city_id = sc.city_id
+INNER JOIN tb_match_mast mm
+	ON sv.venue_id = mm.venue_id
+GROUP BY venue, city
+ORDER BY venue;
+
+
+# Find the player who was the first player to be sent off at the tournament EURO cup 2016
+# Return match number, country name, player name, sent off time, play schedule and jersey number
+SELECT
+	pb.match_no,
+    sc.country_name,
+	pm.player_name,
+    pb.booking_time,
+    pb.play_schedule,
+    pm.jersey_no
+FROM tb_player_booked pb
+INNER JOIN tb_player_mast pm
+	ON pb.player_id = pm.player_id
+INNER JOIN tb_soccer_country sc
+	ON pb.team_id = sc.country_id
+WHERE sent_off = "Y"
+LIMIT 1;
+
+
+# Find the teams that have scored one goal in the tournament
+# Return country_name as "Team", team in the group, goal_for
+SELECT
+	sc.country_name "Team",
+    st.team_group,
+    st.goal_for
+FROM tb_soccer_team st
+INNER JOIN tb_soccer_country sc
+	ON st.team_id = sc.country_id
+WHERE st.goal_for = 1;
+
+
+# Count the number of yellow cards each country has received
+# Return country name and number of yellow cards
+SELECT
+	sc.country_name,
+    COUNT(*) "Yellow cards"
+FROM tb_soccer_country sc
+INNER JOIN tb_player_booked pb
+	ON sc.country_id = pb.team_id
+GROUP BY sc.country_name
+ORDER BY COUNT(*) DESC;
+
+
+# Count the number of goals that have been seen in each venue
+# Return venue name and number of goals
+SELECT
+	sv.venue_name venue,
+    COUNT(*)
+FROM tb_soccer_venue sv
+INNER JOIN tb_match_mast mm
+	ON sv.venue_id = mm.venue_id
+INNER JOIN tb_goal_details gd
+	ON mm.match_no = gd.match_no
+GROUP BY venue
+ORDER BY COUNT(*) DESC;
+
+
+# Find the match where there was no stoppage time in the first half
+# Return match number, country name
+SELECT
+	md.match_no,
+    sc.country_name
+FROM tb_match_details md
+INNER JOIN tb_soccer_country sc
+	ON md.team_id = sc.country_id
+WHERE md.match_no = (SELECT match_no
+					 FROM tb_match_mast
+                     WHERE stop1_sec = 0);
+
+
+# Find the team(s) who conceded the most goals in EURO cup 2016
+# Return country name, team group and match played
+SELECT
+	sc.country_name,
+    st.team_group,
+    st.match_played,
+    st.won,
+    st.lost,
+    st.goal_for,
+    st.goal_agnst
+FROM tb_soccer_team st
+INNER JOIN tb_soccer_country sc
+	ON st.team_id = sc.country_id
+WHERE goal_agnst = (SELECT MAX(goal_agnst)
+					FROM tb_soccer_team);
+
+
+# Find those matches where the highest stoppage time was added in 2nd half of play
+# Return match number, country name, stoppage time(sec.)
+SELECT
+	mm.match_no,
+    sc.country_name,
+    mm.stop2_sec
+FROM tb_match_mast mm
+INNER JOIN tb_match_details md
+	ON mm.match_no = md.match_no
+INNER JOIN tb_soccer_country sc
+	ON md.team_id = sc.country_id
+WHERE mm.stop2_sec = (SELECT MAX(stop2_sec)
+					  FROM tb_match_mast);
+
+
+# Find the matches that ended in a goalless draw at the group stage
+# Return match number, country name
+SELECT
+	md.match_no,
+    sc.country_name
+FROM tb_match_details md
+INNER JOIN tb_soccer_country sc
+	ON md.team_id = sc.country_id
+WHERE md.win_loos = "D" and
+	  md.goal_score = 0;
+
+
+# Find the number of matches played by a player as a goalkeeper for his team
+# Return country name, player name, number of matches played as a goalkeeper
+SELECT
+	sc.country_name,
+    pm.player_name,
+    COUNT(md.match_no)
+FROM tb_player_mast pm
+INNER JOIN tb_match_details md
+	ON pm.player_id = md.player_gk
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+WHERE pm.posi_to_play = "GK"
+GROUP BY sc.country_name, pm.player_name
+ORDER BY sc.country_name;
+
+
+# Find the venue where the most goals have been scored
+# Return venue name, number of goals
+SELECT
+	sv.venue_name,
+    COUNT(gd.goal_id)
+FROM tb_soccer_venue sv
+INNER JOIN tb_match_mast mm
+	ON sv.venue_id = mm.venue_id
+INNER JOIN tb_goal_details gd
+	ON gd.match_no = mm.match_no
+GROUP BY sv.venue_name
+ORDER BY COUNT(gd.goal_id) DESC
+LIMIT 1;
+
+
+# Find the oldest player to have appeared in a EURO 2016 match
+# Return country name, player name, jersey number and age
+SELECT
+	sc.country_name,
+    pm.player_name,
+    pm.jersey_no,
+    pm.age
+FROM tb_player_mast pm
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+WHERE pm.age = (SELECT MAX(age)
+				FROM tb_player_mast);
+
+
+# Find the two teams in this tournament that have scored three goals in a single game
+# Return match number and country name
+SELECT
+	md.match_no,
+    sc.country_name
+FROM tb_match_details md
+INNER JOIN tb_soccer_country sc
+	ON md.team_id = sc.country_id
+WHERE goal_score = 3 and
+	  win_loos = 'D';
+
+
+# Find which teams finished at the bottom of their respective groups after conceding four goals in three games
+# Return country name, team group and match played
+SELECT
+	country_name,
+    st.team_group,
+    st.match_played
+FROM tb_soccer_team st
+INNER JOIN tb_soccer_country sc
+	ON st.team_id = sc.country_id
+WHERE group_position = 4 and
+	  goal_agnst = 4;
+
+
+# Find those players, who were contracted to the Lyon club and participated in the final of the EURO cup 2016
+# Return player name, jersey no, position to play, age, and country name
+SELECT
+	pm.player_name,
+    pm.jersey_no,
+    pm.posi_to_play,
+	pm.age,
+    sc.country_name
+FROM tb_player_mast pm
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+WHERE pm.playing_club = 'Lyon' and
+	  pm.team_id in (SELECT team_id
+					 FROM tb_match_details
+                     WHERE play_stage = 'F');
+
+
+# Final four teams in the tournament
+# Return country name
+SELECT
+	country_name
+FROM tb_soccer_country
+WHERE country_id in (SELECT team_id
+					 FROM tb_match_details
+                     WHERE play_stage = 'S');
+
+
+# Find the captains of the top four teams that competed in the semi-finals (matches 48 and 49) of the tournament
+# Return country name, player name, jersey number and position to play
+SELECT
+	sc.country_name,
+    pm.player_name,
+    pm.jersey_no,
+    pm.posi_to_play
+FROM tb_player_mast pm
+INNER JOIN tb_soccer_country sc
+	ON pm.team_id = sc.country_id
+WHERE player_id in (SELECT player_captain
+					FROM tb_match_captain
+                    WHERE match_no in (48, 49));
+
+
+# Find those players who came into the field at the end of play
+# Return match number, country name, player name, jersey number and time in out
+SELECT
+	DISTINCT io.match_no,
+	sc.country_name,
+    pm.player_name,
+    pm.jersey_no,
+    io.time_in_out
+FROM tb_player_in_out io
+INNER JOIN tb_player_mast pm
+	ON io.player_id = pm.player_id
+INNER JOIN tb_soccer_country sc
+	ON io.team_id = sc.country_id
+WHERE io.in_out = 'I' and
+	  io.time_in_out = (SELECT MAX(time_in_out)
+						FROM tb_player_in_out);
