@@ -1,0 +1,553 @@
+country,player,jersey,position,age,club,total_goals,penalties,booking,captain
+Albania,"Amir Abrashi",22,Midfielders,26,Freiburg,0,0,1,-
+Albania,"Migjen Basha",8,Midfielders,29,Como,0,0,1,-
+Albania,"Lorik Cana",5,Midfielders,32,Nantes,0,0,2,Captain
+Albania,"Ergys Kace",20,Midfielders,22,PAOK,0,0,1,-
+Albania,"Burim Kukeli",13,Midfielders,32,Zurich,0,0,2,-
+Albania,"Ermir Lenjani",3,Midfielders,26,Nantes,0,0,0,-
+Albania,"Ledian Memushaj",9,Midfielders,29,Pescara,0,0,1,-
+Albania,"Odise Roshi",21,Midfielders,25,Rijeka,0,0,0,-
+Albania,"Taulant Xhaka",14,Midfielders,25,Basel,0,0,0,-
+Albania,"Etrit Berisha",1,Goalkeepers,27,Lazio,0,0,0,-
+Albania,"Alban Hoxha",23,Goalkeepers,28,Partizani,0,0,0,-
+Albania,"Orges Shehi",12,Goalkeepers,38,Skenderbeu,0,0,0,-
+Albania,"Bekim Balaj",19,Defenders,25,Rijeka,0,0,0,-
+Albania,"Sokol Cikalleshi",16,Defenders,25,"Istanbul Basaksehir",0,0,0,-
+Albania,"Shkelzen Gashi",11,Defenders,27,Colorado,0,0,0,-
+Albania,"Armando Sadiku",10,Defenders,25,Vaduz,1,0,0,-
+Albania,"Ansi Agolli",7,Defenders,33,Qarabag,0,0,0,Captain
+Albania,"Arlind Ajeti",18,Defenders,22,Frosinone,0,0,0,-
+Albania,"Naser Aliji",17,Defenders,22,Basel,0,0,0,-
+Albania,"Elseid Hysaj",4,Defenders,22,Napoli,0,0,1,-
+Albania,"Andi Lila",2,Defenders,30,Giannina,0,0,0,-
+Albania,"Mergim Mavraj",15,Defenders,30,Koln,0,0,1,-
+Albania,"Frederic Veseli",6,Defenders,23,Lugano,0,0,0,-
+Austria,"David Alaba",8,Midfielders,23,Bayern,0,0,0,-
+Austria,"Julian Baumgartlinger",14,Midfielders,28,Mainz,0,0,0,-
+Austria,"Gyorgy Garics",2,Midfielders,32,Darmstadt,0,0,0,-
+Austria,"Martin Harnik",11,Midfielders,29,Stuttgart,0,0,1,-
+Austria,"Stefan Ilsanker",6,Midfielders,27,Leipzig,0,0,0,-
+Austria,"Jakob Jantscher",22,Midfielders,27,Luzern,0,0,0,-
+Austria,"Zlatko Junuzovic",10,Midfielders,28,Bremen,0,0,0,-
+Austria,"Marcel Sabitzer",20,Midfielders,22,Leipzig,0,0,0,-
+Austria,"Alessandro Schopf",18,Midfielders,22,Schalke,1,0,1,-
+Austria,"Robert Almer",1,Goalkeepers,32,"Austria Wien",0,0,0,-
+Austria,"Heinz Lindner",12,Goalkeepers,25,Frankfurt,0,0,0,-
+Austria,"Ramazan Ozcan",23,Goalkeepers,31,Ingolstadt,0,0,0,-
+Austria,"Marko Arnautovic",7,Defenders,27,Stoke,0,0,0,-
+Austria,"Lukas Hinterseer",19,Defenders,25,Ingolstadt,0,0,0,-
+Austria,"Marc Janko",21,Defenders,32,Basel,0,0,1,-
+Austria,"Rubin Okotie",9,Defenders,29,"1860 Munchen",0,0,0,-
+Austria,"Aleksandar Dragovic",3,Defenders,25,"Dynamo Kyiv",0,0,2,-
+Austria,"Christian Fuchs",5,Defenders,30,Leicester,0,0,1,Captain
+Austria,"Martin Hinteregger",4,Defenders,23,Monchengladbach,0,0,1,-
+Austria,"Florian Klein",17,Defenders,29,Stuttgart,0,0,0,-
+Austria,"Sebastian Prodl",15,Defenders,28,Watford,0,0,0,-
+Austria,"Markus Suttner",13,Defenders,29,Ingolstadt,0,0,0,-
+Austria,"Kevin Wimmer",16,Defenders,23,Tottenham,0,0,0,-
+Belgium,"Yannick Carrasco",11,Midfielders,22,Atletico,1,0,0,-
+Belgium,"Kevin De Bruyne",7,Midfielders,24,"Man. City",0,0,0,-
+Belgium,"Mousa Dembele",19,Midfielders,28,Tottenham,0,0,0,-
+Belgium,"Marouane Fellaini",8,Midfielders,28,"Man. United",0,0,2,-
+Belgium,"Eden Hazard",10,Midfielders,25,Chelsea,1,0,0,Captain
+Belgium,"Radja Nainggolan",4,Midfielders,28,Roma,2,0,0,-
+Belgium,"Axel Witsel",6,Midfielders,27,Zenit,1,0,1,-
+Belgium,"Thibaut Courtois",1,Goalkeepers,24,Chelsea,0,0,0,-
+Belgium,"Jean-Francois Gillet",13,Goalkeepers,37,Mechelen,0,0,0,-
+Belgium,"Simon Mignolet",12,Goalkeepers,27,Liverpool,0,0,0,-
+Belgium,"Michy Batshuayi",22,Defenders,22,Marseille,1,0,1,-
+Belgium,"Christian Benteke",20,Defenders,25,Liverpool,0,0,0,-
+Belgium,"Romelu Lukaku",9,Defenders,23,Everton,2,0,0,-
+Belgium,"Dries Mertens",14,Defenders,29,Napoli,0,0,0,-
+Belgium,"Divock Origi",17,Defenders,21,Liverpool,0,0,0,-
+Belgium,"Toby Alderweireld",2,Defenders,27,Tottenham,1,0,1,-
+Belgium,"Laurent Ciman",23,Defenders,30,Montreal,0,0,0,-
+Belgium,"Jason Denayer",15,Defenders,20,Galatasaray,0,0,0,-
+Belgium,"Christian Kabasele",18,Defenders,25,Genk,0,0,0,-
+Belgium,"Jordan Lukaku",21,Defenders,21,Oostende,0,0,0,-
+Belgium,"Thomas Meunier",16,Defenders,24,"Club Brugge",0,0,1,-
+Belgium,"Thomas Vermaelen",3,Defenders,30,Barcelona,0,0,2,-
+Belgium,"Jan Vertonghen",5,Defenders,29,Tottenham,0,0,1,-
+Croatia,"Milan Badelj",19,Midfielders,27,Fiorentina,0,0,1,-
+Croatia,"Marcelo Brozovic",14,Midfielders,23,Internazionale,0,0,1,-
+Croatia,"Ante Coric",18,Midfielders,19,"Dinamo Zagreb",0,0,0,-
+Croatia,"Mateo Kovacic",8,Midfielders,22,"Real Madrid",0,0,0,-
+Croatia,"Luka Modric",10,Midfielders,30,"Real Madrid",1,0,0,-
+Croatia,"Ivan PeriSic",4,Midfielders,27,Internazionale,2,0,1,-
+Croatia,"Ivan Rakitic",7,Midfielders,28,Barcelona,1,0,0,-
+Croatia,"Marko Rog",15,Midfielders,20,"Dinamo Zagreb",0,0,1,-
+Croatia,"Lovre Kalinic",12,Goalkeepers,26,"Hajduk Split",0,0,0,-
+Croatia,"Danijel SubaSic",23,Goalkeepers,31,Monaco,0,0,0,-
+Croatia,"Ivan Vargic",1,Goalkeepers,29,Rijeka,0,0,0,-
+Croatia,"Duje Cop",22,Defenders,26,Malaga,0,0,0,-
+Croatia,"Nikola Kalinic",16,Defenders,28,Fiorentina,1,0,0,-
+Croatia,"Andrej Kramaric",9,Defenders,24,Hoffenheim,0,0,0,-
+Croatia,"Mario Mandzukic",17,Defenders,30,Juventus,0,0,0,-
+Croatia,"Marko Pjaca",20,Defenders,21,"Dinamo Zagreb",0,0,0,-
+Croatia,"Vedran Corluka",5,Defenders,30,"Lokomotiv Moskva",0,0,0,-
+Croatia,"Tin Jedvaj",6,Defenders,20,Leverkusen,0,0,0,-
+Croatia,"Gordon Schildenfeld",13,Defenders,31,"Dinamo Zagreb",0,0,0,-
+Croatia,"Darijo Srna",11,Defenders,34,"Shakhtar Donetsk",0,0,1,Captain
+Croatia,"Ivan Strinic",3,Defenders,28,Napoli,0,0,1,-
+Croatia,"Domagoj Vida",21,Defenders,27,"Dynamo Kyiv",0,0,1,-
+Croatia,"Sime Vrsaljko",2,Defenders,24,Sassuolo,0,0,1,-
+"Czech Republic","Vladimir Darida",22,Midfielders,25,Hertha,0,0,0,-
+"Czech Republic","Borek Dockal",9,Midfielders,27,"Sparta Praha",0,0,0,-
+"Czech Republic","Daniel Kolar",14,Midfielders,30,Plzen,0,0,0,-
+"Czech Republic","Ladislav Krejci",19,Midfielders,23,"Sparta Praha",0,0,0,-
+"Czech Republic","David Pavelka",15,Midfielders,25,Kasimpasa,0,0,1,-
+"Czech Republic","Jaroslav PlaSil",13,Midfielders,34,Bordeaux,0,0,1,-
+"Czech Republic","Daniel Pudil",11,Midfielders,30,"Sheff. Wednesday",0,0,0,-
+"Czech Republic",TomasRosicky,10,Midfielders,35,Arsenal,0,0,0,Captain
+"Czech Republic","Jiri Skalak",20,Midfielders,24,Brighton,0,0,0,-
+"Czech Republic","Josef Sural",18,Midfielders,26,"Sparta Praha",0,0,1,-
+"Czech Republic","Petr Cech",1,Goalkeepers,34,Arsenal,0,0,0,Captain
+"Czech Republic",TomasKoubek,23,Goalkeepers,23,Liberec,0,0,0,-
+"Czech Republic",TomasVaclik,16,Goalkeepers,27,Basel,0,0,0,-
+"Czech Republic","David Lafata",21,Defenders,34,"Sparta Praha",0,0,0,-
+"Czech Republic",TomasNecid,7,Defenders,26,Bursaspor,1,0,0,-
+"Czech Republic","Milan Skoda",12,Defenders,30,"Slavia Praha",1,0,0,-
+"Czech Republic","Theodor Gebre Selassie",4,Defenders,29,Bremen,0,0,0,-
+"Czech Republic","Roman Hubnik",5,Defenders,32,Plzen,0,0,0,-
+"Czech Republic","Pavel Kaderabek",2,Defenders,24,Hoffenheim,0,0,0,-
+"Czech Republic","Michal Kadlec",3,Defenders,31,Fenerbahce,0,0,0,-
+"Czech Republic","David Limbersky",8,Defenders,32,Plzen,0,0,1,-
+"Czech Republic",TomasSivok,6,Defenders,32,Bursaspor,0,0,1,-
+"Czech Republic","Marek Suchy",17,Defenders,28,Basel,0,0,0,-
+England,"Dele Alli",20,Midfielders,20,Tottenham,0,0,0,-
+England,"Ross Barkley",19,Midfielders,22,Everton,0,0,0,-
+England,"Eric Dier",17,Midfielders,22,Tottenham,1,0,0,-
+England,"Jordan Henderson",14,Midfielders,26,Liverpool,0,0,0,-
+England,"Adam Lallana",8,Midfielders,28,Liverpool,0,0,0,-
+England,"James Milner",4,Midfielders,30,Liverpool,0,0,0,-
+England,"Raheem Sterling",7,Midfielders,21,"Man. City",0,0,0,-
+England,"Jack Wilshere",18,Midfielders,24,Arsenal,0,0,0,-
+England,"Fraser Forster",13,Goalkeepers,28,Southampton,0,0,0,-
+England,"Joe Hart",1,Goalkeepers,29,"Man. City",0,0,0,-
+England,"Tom Heaton",23,Goalkeepers,30,Burnley,0,0,0,-
+England,"Harry Kane",9,Defenders,22,Tottenham,0,0,0,-
+England,"Marcus Rashford",22,Defenders,18,"Man. United",0,0,0,-
+England,"Wayne Rooney",10,Defenders,30,"Man. United",1,0,0,Captain
+England,"Daniel Sturridge",15,Defenders,26,Liverpool,1,0,1,-
+England,"Jamie Vardy",11,Defenders,29,Leicester,1,0,0,-
+England,"Ryan Bertrand",21,Defenders,26,Southampton,0,0,1,-
+England,"Gary Cahill",5,Defenders,30,Chelsea,0,0,1,Captain
+England,"Nathaniel Clyne",12,Defenders,25,Liverpool,0,0,0,-
+England,"Danny Rose",3,Defenders,25,Tottenham,0,0,0,-
+England,"Chris Smalling",6,Defenders,26,"Man. United",0,0,0,-
+England,"John Stones",16,Defenders,22,Everton,0,0,0,-
+England,"Kyle Walker",2,Defenders,26,Tottenham,0,0,0,-
+France,"Yohan Cabaye",6,Midfielders,30,"Crystal Palace",0,0,0,-
+France,"Kingsley Coman",20,Midfielders,20,Bayern,0,0,0,-
+France,"NGolo Kante",5,Midfielders,25,Leicester,0,0,3,-
+France,"Blaise Matuidi",14,Midfielders,29,Paris,0,0,1,-
+France,"Dimitri Payet",8,Midfielders,29,"West Ham",3,0,0,-
+France,"Paul Pogba",15,Midfielders,23,Juventus,1,0,1,-
+France,"Morgan Schneiderlin",12,Midfielders,26,"Man. United",0,0,0,-
+France,"Moussa Sissoko",18,Midfielders,26,Newcastle,0,0,0,-
+France,"Benoit Costil",23,Goalkeepers,28,Rennes,0,0,0,-
+France,"Hugo Lloris",1,Goalkeepers,29,Tottenham,0,0,0,Captain
+France,"Steve Mandanda",16,Goalkeepers,31,Marseille,0,0,0,-
+France,"Andre-Pierre Gignac",10,Defenders,30,Tigres,0,0,0,-
+France,"Olivier Giroud",9,Defenders,29,Arsenal,3,0,1,-
+France,"Antoine Griezmann",7,Defenders,25,Atletico,6,0,0,-
+France,"Anthony Martial",11,Defenders,20,"Man. United",0,0,0,-
+France,"Lucas Digne",17,Defenders,22,Roma,0,0,0,-
+France,"Patrice Evra",3,Defenders,35,Juventus,0,0,1,-
+France,"Christophe Jallet",2,Defenders,32,Lyon,0,0,0,-
+France,"Laurent Koscielny",21,Defenders,30,Arsenal,0,0,2,-
+France,"Eliaquim Mangala",13,Defenders,25,"Man. City",0,0,0,-
+France,"Adil Rami",4,Defenders,30,Sevilla,0,0,2,-
+France,"Bacary Sagna",19,Defenders,33,"Man. City",0,0,0,-
+France,"Samuel Umtiti",22,Defenders,22,Lyon,0,0,2,-
+Germany,"Emre Can",14,Midfielders,22,Liverpool,0,0,1,-
+Germany,"Julian Draxler",11,Midfielders,22,Wolfsburg,1,1,1,-
+Germany,"Mario Gotze",19,Midfielders,24,Bayern,0,0,0,-
+Germany,"Sami Khedira",6,Midfielders,29,Juventus,0,0,1,-
+Germany,"Toni Kroos",18,Midfielders,26,"Real Madrid",0,1,0,-
+Germany,"Mesut ozil",8,Midfielders,27,Arsenal,1,1,2,-
+Germany,"Leroy Sane",20,Midfielders,20,Schalke,0,0,0,-
+Germany,"Andre Schurrle",9,Midfielders,25,Wolfsburg,0,0,0,-
+Germany,"Bastian Schweinsteiger",7,Midfielders,31,"Man. United",1,1,2,Captain
+Germany,"Julian Weigl",15,Midfielders,20,Dortmund,0,0,0,-
+Germany,"Bernd Leno",12,Goalkeepers,24,Leverkusen,0,0,0,-
+Germany,"Manuel Neuer",1,Goalkeepers,30,Bayern,0,0,0,Captain
+Germany,"Marc-Andre ter Stegen",22,Goalkeepers,24,Barcelona,0,0,0,-
+Germany,"Mario Gomez",23,Defenders,30,Besiktas,2,0,0,-
+Germany,"Thomas Muller",13,Defenders,26,Bayern,1,1,0,-
+Germany,"Lukas Podolski",10,Defenders,31,Galatasaray,0,0,0,-
+Germany,"Jerome Boateng",17,Defenders,27,Bayern,1,1,1,-
+Germany,"Jonas Hector",3,Defenders,26,Koln,0,1,0,-
+Germany,"Benedikt Howedes",4,Defenders,28,Schalke,0,0,0,-
+Germany,"Mats Hummels",5,Defenders,27,Dortmund,0,1,2,-
+Germany,"Joshua Kimmich",21,Defenders,21,Bayern,0,1,1,-
+Germany,"Shkodran Mustafi",2,Defenders,24,Valencia,0,0,0,-
+Germany,"Jonathan Tah",16,Defenders,20,Leverkusen,0,0,0,-
+Hungary,"Akos Elek",6,Midfielders,27,Diosgyor,0,0,1,-
+Hungary,"Laszlo Kleinheisler",15,Midfielders,22,Bremen,0,0,1,-
+Hungary,"Gergo Lovrencsics",14,Midfielders,27,Lech,0,0,0,-
+Hungary,"Adam Nagy",8,Midfielders,21,Ferencvaros,0,0,1,-
+Hungary,"Zoltan Stieber",18,Midfielders,27,Nurnberg,1,0,0,-
+Hungary,"Denes Dibusz",12,Goalkeepers,25,Ferencvaros,0,0,0,-
+Hungary,"Peter Gulacsi",22,Goalkeepers,26,Leipzig,0,0,0,-
+Hungary,"Gabor Kiraly",1,Goalkeepers,40,Haladas,0,0,0,-
+Hungary,"Daniel Bode",13,Defenders,29,Ferencvaros,0,0,0,-
+Hungary,"Balazs Dzsudzsak",7,Defenders,29,Bursaspor,2,0,1,Captain
+Hungary,"Zoltan Gera",10,Defenders,37,Ferencvaros,1,0,1,-
+Hungary,"Krisztian Nemeth",11,Defenders,27,Al-Gharafa,0,0,1,-
+Hungary,"Nemanja Nikolic",17,Defenders,28,Legia,0,0,0,-
+Hungary,"Tamas Priskin",19,Defenders,29,"Slovan Bratislava",0,0,0,-
+Hungary,"Adam Szalai",9,Defenders,28,Hannover,1,0,1,-
+Hungary,"Barnabas Bese",21,Defenders,22,MTK,0,0,0,-
+Hungary,"Attila Fiola",5,Defenders,26,"Puskas Akademia",0,0,0,-
+Hungary,"Richard Guzmics",20,Defenders,29,Wisla,0,0,1,-
+Hungary,"Roland Juhasz",23,Defenders,32,Videoton,0,0,1,-
+Hungary,"Tamas Kadar",4,Defenders,26,Lech,0,0,2,-
+Hungary,"Mihaly Korhut",3,Defenders,27,Debrecen,0,0,0,-
+Hungary,"Adam Lang",2,Defenders,23,Videoton,0,0,1,-
+Hungary,"adam Pinter",16,Defenders,28,Ferencvaros,0,0,0,-
+Iceland,"Kari Arnason",14,Midfielders,33,Malmo,0,0,1,-
+Iceland,"Birkir Bjarnason",8,Midfielders,28,Basel,2,0,2,-
+Iceland,"Aron Gunnarsson",17,Midfielders,27,Cardiff,0,0,1,Captain
+Iceland,"Emil Hallfredsson",20,Midfielders,31,Udinese,0,0,0,-
+Iceland,"Gylfi Sigurdsson",10,Midfielders,26,Swansea,1,0,0,-
+Iceland,"Runar Mar Sigurjonsson",16,Midfielders,26,Sundsvall,0,0,0,-
+Iceland,"Hannes Halldorsson",1,Goalkeepers,32,Bodo/Glimt,0,0,2,-
+Iceland,"Ingvar Jonsson",13,Goalkeepers,26,Sandefjord,0,0,0,-
+Iceland,"Ogmundur Kristinsson",12,Goalkeepers,26,Hammarby,0,0,0,-
+Iceland,"Jon Dadi Bodvarsson",15,Defenders,24,Kaiserslautern,2,0,0,-
+Iceland,"Alfred Finnbogason",11,Defenders,27,Augsburg,0,0,2,-
+Iceland,"Eidur Gudjohnsen",22,Defenders,37,Molde,0,0,0,-
+Iceland,"Johann Gudmundsson",7,Defenders,25,Charlton,0,0,1,-
+Iceland,"Kolbeinn Sigthorsson",9,Defenders,26,Nantes,2,0,1,-
+Iceland,"Elmar Bjarnason",18,Defenders,29,AGF,0,0,0,-
+Iceland,"Haukur Heidar Hauksson",3,Defenders,24,AIK,0,0,0,-
+Iceland,"Hjortur Hermannsson",4,Defenders,21,Goteborg,0,0,0,-
+Iceland,"Sverrir Ingason",5,Defenders,22,Lokeren,0,0,0,-
+Iceland,"Hordur Magnusson",19,Defenders,23,Cesena,0,0,0,-
+Iceland,"Birkir Saevarsson",2,Defenders,31,Hammarby,1,0,1,-
+Iceland,"Ragnar Sigurdsson",6,Defenders,29,Krasnodar,0,0,0,-
+Iceland,"Ari Skulason",23,Defenders,29,OB,0,0,1,-
+Iceland,"Arnor Ingvi Traustason",21,Defenders,23,Norrkoping,1,0,0,-
+Italy,"Federico Bernardeschi",21,Midfielders,22,Fiorentina,0,0,0,-
+Italy,"Antonio Candreva",6,Midfielders,29,Lazio,0,0,0,-
+Italy,"Daniele De Rossi",16,Midfielders,32,Roma,0,0,1,-
+Italy,"Alessandro Florenzi",8,Midfielders,25,Roma,0,0,0,-
+Italy,"Emanuele Giaccherini",23,Midfielders,31,Bologna,1,1,0,-
+Italy,"Thiago Motta",10,Midfielders,33,Paris,0,0,2,-
+Italy,"Marco Parolo",18,Midfielders,31,Lazio,0,1,1,-
+Italy,"Stefano Sturaro",14,Midfielders,23,Juventus,0,0,1,-
+Italy,"Gianluigi Buffon",1,Goalkeepers,38,Juventus,0,0,1,Captain
+Italy,"Federico Marchetti",13,Goalkeepers,33,Lazio,0,0,0,-
+Italy,"Salvatore Sirigu",12,Goalkeepers,29,Paris,0,0,1,-
+Italy,Eder,17,Defenders,29,Internazionale,1,0,1,-
+Italy,"Stephan El Shaarawy",22,Defenders,23,Roma,0,0,0,-
+Italy,"Ciro Immobile",11,Defenders,26,Torino,0,0,0,-
+Italy,"Lorenzo Insigne",20,Defenders,25,Napoli,0,1,1,-
+Italy,"Graziano Pelle",9,Defenders,30,Southampton,2,1,1,-
+Italy,"Simone Zaza",7,Defenders,24,Juventus,0,1,1,-
+Italy,"Andrea Barzagli",15,Defenders,35,Juventus,0,1,1,-
+Italy,"Leonardo Bonucci",19,Defenders,29,Juventus,1,1,1,Captain
+Italy,"Giorgio Chiellini",3,Defenders,31,Juventus,1,0,1,-
+Italy,"Matteo Darmian",4,Defenders,26,"Man. United",0,1,0,-
+Italy,"Mattia De Sciglio",2,Defenders,23,Milan,0,1,2,-
+Italy,"Angelo Ogbonna",5,Defenders,28,"West Ham",0,0,0,-
+"Northern Ireland","Stuart Dallas",14,Midfielders,25,Leeds,0,0,2,-
+"Northern Ireland","Steven Davis",8,Midfielders,31,Southampton,0,0,1,Captain
+"Northern Ireland","Corry Evans",13,Midfielders,25,Blackburn,0,0,0,-
+"Northern Ireland","Shane Ferguson",3,Midfielders,24,Millwall,0,0,0,-
+"Northern Ireland","Josh Magennis",21,Midfielders,25,Kilmarnock,0,0,0,-
+"Northern Ireland","Oliver Norwood",16,Midfielders,25,Reading,0,0,0,-
+"Northern Ireland","Jamie Ward",19,Midfielders,30,"Nottm Forest",0,0,1,-
+"Northern Ireland","Roy Carroll",12,Goalkeepers,38,"Notts County",0,0,0,-
+"Northern Ireland","Alan Mannus",23,Goalkeepers,34,"St Johnstone",0,0,0,-
+"Northern Ireland","Michael McGovern",1,Goalkeepers,31,Hamilton,0,0,0,-
+"Northern Ireland","Will Grigg",9,Defenders,24,Wigan,0,0,0,-
+"Northern Ireland","Kyle Lafferty",10,Defenders,28,Birmingham,0,0,0,-
+"Northern Ireland","Niall McGinn",7,Defenders,28,Aberdeen,1,0,0,-
+"Northern Ireland","Conor Washington",11,Defenders,24,QPR,0,0,0,-
+"Northern Ireland","Chris Baird",6,Defenders,34,Fulham,0,0,0,-
+"Northern Ireland","Craig Cathcart",20,Defenders,27,Watford,0,0,1,-
+"Northern Ireland","Jonny Evans",5,Defenders,28,"West Brom",0,0,1,-
+"Northern Ireland","Lee Hodson",22,Defenders,24,"MK Dons",0,0,0,-
+"Northern Ireland","Aaron Hughes",18,Defenders,36,"Melbourne City",0,0,0,-
+"Northern Ireland","Gareth McAuley",4,Defenders,36,"West Brom",2,0,0,-
+"Northern Ireland","Luke McCullough",15,Defenders,22,Doncaster,0,0,0,-
+"Northern Ireland","Conor McLaughlin",2,Defenders,24,Fleetwood,0,0,0,-
+"Northern Ireland","Paddy McNair",17,Defenders,21,"Man. United",0,0,0,-
+Poland,"Jakub Blaszczykowski",16,Midfielders,30,Fiorentina,2,2,0,-
+Poland,"Kamil Grosicki",11,Midfielders,28,Rennes,0,0,1,-
+Poland,"Tomasz Jodlowiec",6,Midfielders,30,Legia,0,0,0,-
+Poland,"Bartosz Kapustka",21,Midfielders,19,,0,0,3,-
+Poland,"Grzegorz Krychowiak",10,Midfielders,26,Sevilla,0,1,0,-
+Poland,"Karol Linetty",8,Midfielders,21,Lech,0,0,0,-
+Poland,"Krzysztof Maczynski",5,Midfielders,29,Wisla,0,0,1,-
+Poland,"Slawomir Peszko",17,Midfielders,31,Lechia,0,0,1,-
+Poland,"Filip Starzynski",23,Midfielders,25,Zaglebie,0,0,0,-
+Poland,"Piotr Zielinski",19,Midfielders,22,Empoli,0,0,0,-
+Poland,"Artur Boruc",12,Goalkeepers,36,Bournemouth,0,0,0,-
+Poland,"Lukasz Fabianski",22,Goalkeepers,31,Swansea,0,0,0,-
+Poland,"Wojciech Szczesny",1,Goalkeepers,26,Roma,0,0,0,-
+Poland,"Robert Lewandowski",9,Defenders,27,Bayern,1,2,0,Captain
+Poland,"Arkadiusz Milik",7,Defenders,22,Ajax,1,2,0,-
+Poland,"Mariusz Stepinski",13,Defenders,21,Ruch,0,0,0,-
+Poland,"Thiago Cionek",4,Defenders,30,Palermo,0,0,0,-
+Poland,"Kamil Glik",15,Defenders,28,Torino,0,2,1,-
+Poland,"Artur Jedrzejczyk",3,Defenders,28,Legia,0,0,2,-
+Poland,"Michal Pazdan",2,Defenders,28,Legia,0,0,0,-
+Poland,"Lukasz Piszczek",20,Defenders,31,Dortmund,0,0,1,-
+Poland,"Bartosz Salamon",18,Defenders,25,Cagliari,0,0,0,-
+Poland,"Jakub Wawrzyniak",14,Defenders,32,Lechia,0,0,0,-
+Portugal,"Adrien Silva",23,Midfielders,27,"Sporting CP",0,0,1,-
+Portugal,"Andre Gomes",15,Midfielders,22,Valencia,0,0,0,-
+Portugal,Danilo,13,Midfielders,24,Porto,0,0,0,-
+Portugal,"Joao Mario",10,Midfielders,23,"Sporting CP",0,0,1,-
+Portugal,"Joao Moutinho",8,Midfielders,29,Monaco,0,1,0,-
+Portugal,"Rafa Silva",18,Midfielders,23,Braga,0,0,0,-
+Portugal,"Renato Sanches",16,Midfielders,18,Benfica,1,1,0,-
+Portugal,Vieirinha,11,Midfielders,30,Wolfsburg,0,0,0,-
+Portugal,"William Carvalho",14,Midfielders,24,"Sporting CP",0,0,3,-
+Portugal,Eduardo,22,Goalkeepers,33,"Dinamo Zagreb",0,0,0,-
+Portugal,"Anthony Lopes",12,Goalkeepers,25,Lyon,0,0,0,-
+Portugal,"Rui Patricio",1,Goalkeepers,28,"Sporting CP",0,0,1,-
+Portugal,Eder,9,Defenders,28,LOSC,1,0,0,-
+Portugal,Nani,17,Defenders,29,Fenerbahce,3,1,0,-
+Portugal,"Ricardo Quaresma",20,Defenders,32,Besiktas,1,1,1,-
+Portugal,"Cristiano Ronaldo",7,Defenders,31,"Real Madrid",3,1,1,Captain
+Portugal,"Bruno Alves",2,Defenders,34,Fenerbahce,0,0,1,-
+Portugal,Cedric,21,Defenders,24,Southampton,0,0,1,-
+Portugal,Eliseu,19,Defenders,32,Benfica,0,0,0,-
+Portugal,"Jose Fonte",4,Defenders,32,Southampton,0,0,1,-
+Portugal,Pepe,3,Defenders,33,"Real Madrid",0,0,1,-
+Portugal,"Raphael Guerreiro",5,Defenders,22,Lorient,0,0,1,-
+Portugal,"Ricardo Carvalho",6,Defenders,38,Monaco,0,0,0,-
+"Republic of Ireland","Robbie Brady",19,Midfielders,24,Norwich,2,0,0,-
+"Republic of Ireland","Jeff Hendrick",13,Midfielders,24,Derby,0,0,2,-
+"Republic of Ireland","Wes Hoolahan",20,Midfielders,34,Norwich,1,0,0,-
+"Republic of Ireland","James McCarthy",8,Midfielders,25,Everton,0,0,1,-
+"Republic of Ireland","James McClean",11,Midfielders,27,"West Brom",0,0,0,-
+"Republic of Ireland","Aiden McGeady",7,Midfielders,30,"Sheff. Wednesday",0,0,0,-
+"Republic of Ireland","David Meyler",18,Midfielders,27,Hull,0,0,0,-
+"Republic of Ireland","Stephen Quinn",22,Midfielders,30,Reading,0,0,0,-
+"Republic of Ireland","Glenn Whelan",6,Midfielders,32,Stoke,0,0,1,-
+"Republic of Ireland","Shay Given",16,Goalkeepers,40,Stoke,0,0,0,-
+"Republic of Ireland","Darren Randolph",23,Goalkeepers,29,"West Ham",0,0,0,-
+"Republic of Ireland","Keiren Westwood",1,Goalkeepers,31,"Sheff. Wednesday",0,0,0,-
+"Republic of Ireland","Robbie Keane",10,Defenders,35,"LA Galaxy",0,0,0,-
+"Republic of Ireland","Shane Long",9,Defenders,29,Southampton,0,0,2,-
+"Republic of Ireland","Daryl Murphy",21,Defenders,33,Ipswich,0,0,0,-
+"Republic of Ireland","Jon Walters",14,Defenders,32,Stoke,0,0,0,-
+"Republic of Ireland","Cyrus Christie",15,Defenders,23,Derby,0,0,0,-
+"Republic of Ireland","Ciaran Clark",3,Defenders,26,"Aston Villa",1,0,0,-
+"Republic of Ireland","Seamus Coleman",2,Defenders,27,Everton,0,0,1,Captain
+"Republic of Ireland","Shane Duffy",12,Defenders,24,Blackburn,0,0,1,-
+"Republic of Ireland","Richard Keogh",5,Defenders,29,Derby,0,0,0,-
+"Republic of Ireland","John OShea",4,Defenders,35,Sunderland,0,0,0,Captain
+"Republic of Ireland","Stephen Ward",17,Defenders,30,Burnley,0,0,1,-
+Romania,"Alexandru Chipciu",7,Midfielders,27,Steaua,0,0,1,-
+Romania,"Ovidiu Hoban",5,Midfielders,33,"H. Beer-Sheva",0,0,0,-
+Romania,"Mihai Pintilii",8,Midfielders,31,Steaua,0,0,0,-
+Romania,"Adrian Popa",20,Midfielders,27,Steaua,0,0,1,-
+Romania,"Andrei Prepelita",18,Midfielders,30,Ludogorets,0,0,1,-
+Romania,"Lucian Sanmartean",17,Midfielders,36,Al-Ittihad,0,0,0,-
+Romania,"Nicolae Stanciu",10,Midfielders,23,Steaua,0,0,0,-
+Romania,"Gabriel Torje",11,Midfielders,26,Osmanlispor,0,0,1,-
+Romania,"Silviu Lung",23,Goalkeepers,27,Astra,0,0,0,-
+Romania,"Costel Pantilimon",1,Goalkeepers,29,Watford,0,0,0,-
+Romania,"Ciprian Tatarusanu",12,Goalkeepers,30,Fiorentina,0,0,0,-
+Romania,"Denis Alibec",9,Defenders,25,Astra,0,0,0,-
+Romania,"Florin Andone",14,Defenders,23,Cordoba,0,0,0,-
+Romania,"Claudiu Keeru",13,Defenders,29,Ludogorets,0,0,1,-
+Romania,"Bogdan Stancu",19,Defenders,28,Genclerbirligi,2,0,0,-
+Romania,"Vlad Chiriches",6,Defenders,26,Napoli,0,0,1,Captain
+Romania,"Steliano Filip",16,Defenders,22,"Dinamo Bucuresti",0,0,0,-
+Romania,"Valerica Gaman",15,Defenders,27,Astra,0,0,0,-
+Romania,"Dragos Grigore",21,Defenders,29,Al-Sailiya,0,0,1,-
+Romania,"Alexandru Matel",2,Defenders,26,"Dinamo Zagreb",0,0,1,-
+Romania,"Cosmin Moti",4,Defenders,31,Ludogorets,0,0,0,-
+Romania,"Razvan Rat",3,Defenders,35,"Rayo Vallecano",0,0,1,-
+Romania,"Cristian Sapunaru",22,Defenders,32,Pandurii,0,0,1,-
+Russia,"Denis Glushakov",8,Midfielders,29,"Spartak Moskva",1,0,0,-
+Russia,"Aleksandr Golovin",13,Midfielders,20,"CSKA Moskva",0,0,0,-
+Russia,"Oleg Ivanov",18,Midfielders,29,Terek,0,0,0,-
+Russia,"Pavel Mamaev",11,Midfielders,27,Krasnodar,0,0,1,-
+Russia,"Aleksandr Samedov",19,Midfielders,31,"Lokomotiv Moskva",0,0,0,-
+Russia,"Oleg Shatov",17,Midfielders,25,Zenit,0,0,0,-
+Russia,"Roman Shirokov",15,Midfielders,34,"CSKA Moskva",0,0,0,Captain
+Russia,"Dmitri Torbinski",20,Midfielders,32,Krasnodar,0,0,0,-
+Russia,"Artur Yusupov",7,Midfielders,26,Zenit,0,0,0,-
+Russia,"Igor Akinfeev",1,Goalkeepers,30,"CSKA Moskva",0,0,0,-
+Russia,Guilherme,16,Goalkeepers,30,"Lokomotiv Moskva",0,0,0,-
+Russia,"Yuri Lodygin",12,Goalkeepers,26,Zenit,0,0,0,-
+Russia,"Artem Dzyuba",22,Defenders,27,Zenit,0,0,0,-
+Russia,"Aleksandr Kokorin",9,Defenders,25,Zenit,0,0,0,-
+Russia,"Fedor Smolov",10,Defenders,26,Krasnodar,0,0,0,-
+Russia,"Aleksei Berezutski",6,Defenders,33,"CSKA Moskva",0,0,0,-
+Russia,"Vasili Berezutski",14,Defenders,33,"CSKA Moskva",1,0,0,Captain
+Russia,"Sergei Ignashevich",4,Defenders,36,"CSKA Moskva",0,0,0,-
+Russia,"Dmitri Kombarov",23,Defenders,29,"Spartak Moskva",0,0,0,-
+Russia,"Roman Neustadter",5,Defenders,28,Schalke,0,0,0,-
+Russia,"Georgi Schennikov",21,Defenders,25,"CSKA Moskva",0,0,1,-
+Russia,"Roman Shishkin",2,Defenders,29,"Lokomotiv Moskva",0,0,0,-
+Russia,"Igor Smolnikov",3,Defenders,27,Zenit,0,0,0,-
+Slovakia,"Ondrej Duda",8,Midfielders,21,Legia,1,0,0,-
+Slovakia,"Jan Gregus",6,Midfielders,25,Jablonec,0,0,0,-
+Slovakia,"Marek Hamsik",17,Midfielders,28,Napoli,1,0,0,-
+Slovakia,"Patrik HroSovsky",13,Midfielders,24,Plzen,0,0,1,-
+Slovakia,"Juraj Kucka",19,Midfielders,29,Milan,0,0,2,-
+Slovakia,"Robert Mak",20,Midfielders,25,PAOK,0,0,1,-
+Slovakia,"Viktor Pecovsky",22,Midfielders,33,zilina,0,0,1,-
+Slovakia,"Miroslav Stoch",10,Midfielders,26,Bursaspor,0,0,0,-
+Slovakia,"Vladimir Weiss",7,Midfielders,26,Al-Gharafa,1,0,1,-
+Slovakia,MatusKozacik,23,Goalkeepers,32,Plzen,0,0,0,-
+Slovakia,"Jan Mucha",1,Goalkeepers,33,"Slovan Bratislava",0,0,0,-
+Slovakia,"Jan Novota",12,Goalkeepers,32,"Rapid Wien",0,0,0,-
+Slovakia,"Michal Duris",21,Defenders,28,Plzen,0,0,0,-
+Slovakia,"Adam Nemec",11,Defenders,30,"Willem II",0,0,0,-
+Slovakia,"Stanislav Sestak",9,Defenders,33,Ferencvaros,0,0,0,-
+Slovakia,"Jan Durica",4,Defenders,34,"Lokomotiv Moskva",0,0,1,-
+Slovakia,"Norbert Gyomber",5,Defenders,23,Roma,0,0,0,-
+Slovakia,TomasHubocan,15,Defenders,30,"Dinamo Moskva",0,0,0,-
+Slovakia,"Peter Pekarik",2,Defenders,29,Hertha,0,0,0,-
+Slovakia,"Kornel Salata",16,Defenders,31,"Slovan Bratislava",0,0,0,-
+Slovakia,"Milan Skriniar",14,Defenders,21,Sampdoria,0,0,0,-
+Slovakia,"Martin Skrtel",3,Defenders,31,Liverpool,0,0,2,Captain
+Slovakia,"Dusan Svento",18,Defenders,30,Koln,0,0,0,-
+Spain,"Bruno Soriano",19,Midfielders,32,Villarreal,0,0,0,-
+Spain,"Sergio Busquets",5,Midfielders,27,Barcelona,0,0,1,-
+Spain,"Cesc Fabregas",10,Midfielders,29,Chelsea,0,0,0,-
+Spain,"Andres Iniesta",6,Midfielders,32,Barcelona,0,0,0,-
+Spain,Koke,8,Midfielders,24,Atletico,0,0,0,-
+Spain,"David Silva",21,Midfielders,30,"Man. City",0,0,1,-
+Spain,"Thiago Alcantara",14,Midfielders,25,Bayern,0,0,0,-
+Spain,"Lker Casillas",1,Goalkeepers,35,Porto,0,0,0,-
+Spain,"David de Gea",13,Goalkeepers,25,"Man. United",0,0,0,-
+Spain,"Sergio Rico",23,Goalkeepers,22,Sevilla,0,0,0,-
+Spain,"Aritz Aduriz",20,Defenders,35,Athletic,0,0,0,-
+Spain,"Lucas Vazquez",9,Defenders,24,"Real Madrid",0,0,0,-
+Spain,"Alvaro Morata",7,Defenders,23,Juventus,3,0,0,-
+Spain,Nolito,22,Defenders,29,Celta,1,0,1,-
+Spain,"Pedro Rodriguez",11,Defenders,28,Chelsea,0,0,0,-
+Spain,"Cesar Azpilicueta",2,Defenders,26,Chelsea,0,0,0,-
+Spain,"Marc Bartra",4,Defenders,25,Barcelona,0,0,0,-
+Spain,"Hector Bellerin",12,Defenders,21,Arsenal,0,0,0,-
+Spain,"Jordi Alba",18,Defenders,27,Barcelona,0,0,1,-
+Spain,Juanfran,16,Defenders,31,Atletico,0,0,0,-
+Spain,"Gerard Pique",3,Defenders,29,Barcelona,1,0,0,-
+Spain,"Sergio Ramos",15,Defenders,30,"Real Madrid",0,0,1,Captain
+Spain,"Mikel San Jose",17,Defenders,27,Athletic,0,0,0,-
+Sweden,"Jimmy Durmaz",21,Midfielders,27,Olympiacos,0,0,0,-
+Sweden,"Albin Ekdal",8,Midfielders,26,Hamburg,0,0,0,-
+Sweden,"Erkan Zengin",22,Midfielders,30,Trabzonspor,0,0,0,-
+Sweden,"Emil Forsberg",6,Midfielders,24,Leipzig,0,0,1,-
+Sweden,"Oscar Hiljemark",15,Midfielders,23,Palermo,0,0,0,-
+Sweden,"Kim Kallstrom",9,Midfielders,33,Grasshoppers,0,0,0,-
+Sweden,"Sebastian Larsson",7,Midfielders,31,Sunderland,0,0,0,-
+Sweden,"Oscar Lewicki",18,Midfielders,23,Malmo,0,0,0,-
+Sweden,"Pontus Wernbloom",16,Midfielders,29,"CSKA Moskva",0,0,0,-
+Sweden,"Patrik Carlgren",23,Goalkeepers,24,AIK,0,0,0,-
+Sweden,"Andreas Isaksson",1,Goalkeepers,34,Kasimpasa,0,0,0,-
+Sweden,"Robin Olsen",12,Goalkeepers,26,Kobenhavn,0,0,0,-
+Sweden,"Marcus Berg",11,Defenders,29,Panathinaikos,0,0,0,-
+Sweden,"John Guidetti",20,Defenders,24,Celta,0,0,0,-
+Sweden,"Zlatan Ibrahimovic",10,Defenders,34,Paris,0,0,0,Captain
+Sweden,"Emir Kujovic",19,Defenders,27,Norrkoping,0,0,0,-
+Sweden,"Ludwig Augustinsson",17,Defenders,22,Kobenhavn,0,0,0,-
+Sweden,"Andreas Granqvist",4,Defenders,31,Krasnodar,0,0,0,-
+Sweden,"Pontus Jansson",13,Defenders,25,Torino,0,0,0,-
+Sweden,"Erik Johansson",3,Defenders,27,Kobenhavn,0,0,0,-
+Sweden,"Victor Lindelof",14,Defenders,21,Benfica,0,0,1,-
+Sweden,"Mikael Lustig",2,Defenders,29,Celtic,0,0,0,-
+Sweden,"Martin Olsson",5,Defenders,28,Norwich,0,0,1,-
+Switzerland,"Valon Behrami",11,Midfielders,31,Watford,0,0,1,-
+Switzerland,"Blerim Dzemaili",15,Midfielders,30,Genoa,0,0,0,-
+Switzerland,"Gelson Fernandes",16,Midfielders,29,Rennes,0,0,0,-
+Switzerland,"Fabian Frei",8,Midfielders,27,Mainz,0,0,0,-
+Switzerland,"Xherdan Shaqiri",23,Midfielders,24,Stoke,1,1,0,-
+Switzerland,"Granit Xhaka",10,Midfielders,23,Monchengladbach,0,1,1,-
+Switzerland,"Denis Zakaria",14,Midfielders,19,"Young Boys",0,0,0,-
+Switzerland,"Roman Burki",21,Goalkeepers,25,Dortmund,0,0,0,-
+Switzerland,"Marwin Hitz",12,Goalkeepers,28,Augsburg,0,0,0,-
+Switzerland,"Yann Sommer",1,Goalkeepers,27,Monchengladbach,0,0,0,-
+Switzerland,"Eren Derdiyok",19,Defenders,28,Kasimpasa,0,0,0,-
+Switzerland,"Breel Embolo",7,Defenders,19,Basel,0,0,1,-
+Switzerland,"Admir Mehmedi",18,Defenders,25,Leverkusen,1,0,0,-
+Switzerland,"Haris Seferovic",9,Defenders,24,Frankfurt,0,0,0,-
+Switzerland,"Shani Tarashaj",17,Defenders,21,Grasshoppers,0,0,0,-
+Switzerland,"Johan Djourou",20,Defenders,29,Hamburg,0,0,0,-
+Switzerland,"Nico Elvedi",4,Defenders,19,Monchengladbach,0,0,0,-
+Switzerland,"Michael Lang",6,Defenders,25,Basel,0,0,0,-
+Switzerland,"Stephan Lichtsteiner",2,Defenders,32,Juventus,0,1,0,Captain
+Switzerland,"Francois Moubandje",3,Defenders,25,Toulouse,0,0,0,-
+Switzerland,"Ricardo Rodriguez",13,Defenders,23,Wolfsburg,0,1,0,-
+Switzerland,"Fabian Schar",22,Defenders,24,Hoffenheim,1,1,2,-
+Switzerland,"Steve von Bergen",5,Defenders,33,"Young Boys",0,0,0,-
+Turkey,"Arda Turan",10,Midfielders,29,Barcelona,0,0,0,Captain
+Turkey,"Hakan Calhanoglu",6,Midfielders,22,Leverkusen,0,0,0,-
+Turkey,"Mehmet Topal",15,Midfielders,30,Fenerbahce,0,0,0,-
+Turkey,"Nuri Sahin",5,Midfielders,27,Dortmund,0,0,0,-
+Turkey,"Oguzhan Ozyakup",14,Midfielders,23,Besiktas,0,0,0,-
+Turkey,"Olcay Sahan",11,Midfielders,29,Besiktas,0,0,0,-
+Turkey,"Ozan Tufan",16,Midfielders,21,Fenerbahce,1,0,1,-
+Turkey,"Selcuk Inan",8,Midfielders,31,Galatasaray,0,0,0,-
+Turkey,"Volkan Sen",20,Midfielders,28,Fenerbahce,0,0,1,-
+Turkey,"Yunus Malli",19,Midfielders,24,Mainz,0,0,0,-
+Turkey,"Harun Tekin",23,Goalkeepers,27,Bursaspor,0,0,0,-
+Turkey,"Onur Kivrak",12,Goalkeepers,28,Trabzonspor,0,0,0,-
+Turkey,"Volkan Babacan",1,Goalkeepers,27,"Istanbul Basaksehir",0,0,0,-
+Turkey,"Burak Yilmaz",17,Defenders,30,"Beijing Guoan",1,0,1,-
+Turkey,"Cenk Tosun",9,Defenders,25,Besiktas,0,0,1,-
+Turkey,"Emre Mor",21,Defenders,18,Nordsjælland,0,0,0,-
+Turkey,"Ahmet Calik",4,Defenders,22,Genclerbirligi,0,0,0,-
+Turkey,"Caner Erkin",18,Defenders,27,Fenerbahce,0,0,0,-
+Turkey,"Gokhan Gonul",7,Defenders,31,Fenerbahce,0,0,0,-
+Turkey,"Hakan Balta",3,Defenders,33,Galatasaray,0,0,2,-
+Turkey,"Ismail Koybasi",13,Defenders,26,Besiktas,0,0,1,-
+Turkey,"Semih Kaya",2,Defenders,25,Galatasaray,0,0,0,-
+Turkey,"Sener Ozbayrakli",22,Defenders,26,Fenerbahce,0,0,0,-
+Ukraine,"Denys Garmash",19,Midfielders,26,"Dynamo Kyiv",0,0,0,-
+Ukraine,"Olexandr Karavaev",22,Midfielders,24,Zorya,0,0,0,-
+Ukraine,"Yevhen Konoplyanka",10,Midfielders,26,Sevilla,0,0,1,-
+Ukraine,"Viktor Kovalenko",9,Midfielders,20,"Shakhtar Donetsk",0,0,0,-
+Ukraine,"Ruslan Rotan",14,Midfielders,34,Dnipro,0,0,1,Captain
+Ukraine,"Serhiy Rybalka",18,Midfielders,26,"Dynamo Kyiv",0,0,0,-
+Ukraine,"Taras Stepanenko",6,Midfielders,26,"Shakhtar Donetsk",0,0,0,-
+Ukraine,"Serhiy Sydorchuk",16,Midfielders,25,"Dynamo Kyiv",0,0,1,-
+Ukraine,"Anatoliy Tymoshchuk",4,Midfielders,37,Kairat,0,0,0,-
+Ukraine,"Andriy Yarmolenko",7,Midfielders,26,"Dynamo Kyiv",0,0,0,-
+Ukraine,"Olexandr Zinchenko",21,Midfielders,19,Ufa,0,0,0,-
+Ukraine,"Denys Boyko",1,Goalkeepers,28,Besiktas,0,0,0,-
+Ukraine,"Andriy Pyatov",12,Goalkeepers,31,"Shakhtar Donetsk",0,0,0,-
+Ukraine,"Mykyta Shevchenko",23,Goalkeepers,23,Zorya,0,0,0,-
+Ukraine,"Pylyp Budkivskiy",15,Defenders,24,Zorya,0,0,0,-
+Ukraine,"Yevhen Seleznyov",11,Defenders,30,"Shakhtar Donetsk",0,0,1,-
+Ukraine,"Roman Zozulya",8,Defenders,26,Dnipro,0,0,0,-
+Ukraine,"Bohdan Butko",2,Defenders,25,Amkar,0,0,0,-
+Ukraine,"Artem Fedetskiy",17,Defenders,31,Dnipro,0,0,0,-
+Ukraine,"Yevhen Khacheridi",3,Defenders,28,"Dynamo Kyiv",0,0,0,-
+Ukraine,"Olexandr Kucher",5,Defenders,33,"Shakhtar Donetsk",0,0,1,-
+Ukraine,"Yaroslav Rakitskiy",20,Defenders,26,"Shakhtar Donetsk",0,0,0,-
+Ukraine,"Vyacheslav Shevchuk",13,Defenders,37,"Shakhtar Donetsk",0,0,0,Captain
+Wales,"Joe Allen",7,Midfielders,26,Liverpool,0,0,1,-
+Wales,"David Edwards",14,Midfielders,30,Wolves,0,0,0,-
+Wales,"Andy King",8,Midfielders,27,Leicester,0,0,0,-
+Wales,"Joe Ledley",16,Midfielders,29,"Crystal Palace",0,0,0,-
+Wales,"Aaron Ramsey",10,Midfielders,25,Arsenal,1,0,2,-
+Wales,"David Vaughan",22,Midfielders,33,"Nottm Forest",0,0,0,-
+Wales,"Jonathan Williams",20,Midfielders,22,"Crystal Palace",0,0,0,-
+Wales,"Owain Fon Williams",12,Goalkeepers,29,Inverness,0,0,0,-
+Wales,"Wayne Hennessey",1,Goalkeepers,29,"Crystal Palace",0,0,0,-
+Wales,"Danny Ward",21,Goalkeepers,22,Liverpool,0,0,0,-
+Wales,"Gareth Bale",11,Defenders,26,"Real Madrid",3,0,1,-
+Wales,"Simon Church",23,Defenders,27,"MK Dons",0,0,0,-
+Wales,"David Cotterill",17,Defenders,28,Birmingham,0,0,0,-
+Wales,"Hal Robson-Kanu",9,Defenders,27,Reading,2,0,0,-
+Wales,"Sam Vokes",18,Defenders,26,Burnley,1,0,1,-
+Wales,"George Williams",13,Defenders,20,Fulham,0,0,0,-
+Wales,"James Chester",5,Defenders,27,"West Brom",0,0,2,-
+Wales,"James Collins",19,Defenders,32,"West Ham",0,0,0,-
+Wales,"Ben Davies",4,Defenders,23,Tottenham,0,0,2,-
+Wales,"Chris Gunter",2,Defenders,26,Reading,0,0,1,-
+Wales,"Jazz Richards",15,Defenders,25,Fulham,0,0,0,-
+Wales,"Neil Taylor",3,Defenders,27,Swansea,1,0,1,-
+Wales,"Ashley Williams",6,Defenders,31,Swansea,1,0,0,Captain

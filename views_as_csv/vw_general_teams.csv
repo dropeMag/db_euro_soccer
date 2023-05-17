@@ -1,0 +1,26 @@
+country_name,coach,team_group,won,draw,lost,goal_for,goal_agnst,booking,changes,group_position
+Albania,"Gianni De Biasi",A,1,0,2,1,3,10,9,3
+Austria,"Marcel Koller",F,0,1,2,1,4,7,9,4
+Belgium,"Marc Wilmots",E,2,0,1,4,2,9,15,2
+Croatia,"Ante Cacic",D,2,1,0,5,3,8,12,1
+"Czech Republic","Pavel Vrba",D,0,1,2,2,5,5,9,4
+England,"Roy Hodgson",B,1,2,0,3,2,3,11,2
+France,"Didier Deschamps",A,2,1,0,4,1,13,20,1
+Germany,"Joachim Low",C,2,1,0,3,0,11,15,1
+Hungary,"Bernd Storck",F,1,2,0,6,4,12,12,1
+Iceland,"Lars Lagerback",F,1,2,0,4,3,12,13,2
+Iceland,"Heimir Hallgrímsson",F,1,2,0,4,3,12,13,2
+Italy,"Antonio Conte",E,2,0,1,3,1,16,15,1
+"Northern Ireland","Michael ONeill",C,1,0,2,2,2,6,12,3
+Poland,"Adam Nawalka",C,2,1,0,2,0,10,13,2
+Portugal,"Fernando Santos",F,0,3,0,4,4,13,21,3
+"Republic of Ireland","Martin ONeill",E,1,1,1,2,4,9,12,3
+Romania,"Anghel Iordanescu",A,0,1,2,2,4,10,9,4
+Russia,"Leonid Slutski",B,0,1,2,2,6,2,9,4
+Slovakia,"Jan Kozak",B,1,1,1,3,3,9,12,3
+Spain,"Vicente del Bosque",D,2,0,1,5,2,5,12,2
+Sweden,"Erik Hamren",E,0,1,2,1,3,3,9,4
+Switzerland,"Vladimir Petkovic",A,1,2,0,2,1,5,12,2
+Turkey,"Fatih Terim",D,1,0,2,2,4,7,9,3
+Ukraine,"Mykhailo Fomenko",C,0,0,3,0,5,5,7,4
+Wales,"Chris Coleman",B,2,0,1,6,3,11,16,1

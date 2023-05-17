@@ -1,35 +1,47 @@
 CREATE VIEW vw_general_players AS
 SELECT
-	country_name country,
-    player_name player,
+    country_name country,
+	player_name player,
     jersey_no jersey,
-    posi_to_play position,
+    position_desc position,
     age,
     playing_club club,
-	COUNT(goal_id) goals,
-    COUNT(kick_id) penalties,
-    COUNT(booking_time) bookings,
+	CASE
+		WHEN gd.total_goals IS NULL THEN 0
+        ELSE gd.total_goals
+	END total_goals,
+    CASE
+		WHEN ps.scored_penalty IS NULL THEN 0 
+        ELSE ps.scored_penalty
+    END penalties,
+	CASE
+		WHEN pb.total_booking IS NULL THEN 0
+        ELSE pb.total_booking
+	END booking,
     CASE
 		WHEN mp.player_captain IS NULL THEN '-'
         ELSE 'Captain'
-	END captain,
-    coach_name coach
+	END captain
 FROM tb_player_mast pm
 INNER JOIN tb_soccer_country sc
 	ON pm.team_id = sc.country_id
-LEFT JOIN tb_goal_details gd
+INNER JOIN tb_playing_position pp
+	ON pm.posi_to_play = pp.position_id
+LEFT JOIN (SELECT DISTINCT player_id, COUNT(goal_id) AS total_goals
+		   FROM tb_goal_details
+		   GROUP BY player_id) gd 
 	ON pm.player_id = gd.player_id
-LEFT JOIN tb_penalty_shootout ps
+LEFT JOIN (SELECT DISTINCT player_id, COUNT(kick_id) AS scored_penalty
+		   FROM tb_penalty_shootout
+           GROUP BY player_id) ps
 	ON pm.player_id = ps.player_id
-LEFT JOIN tb_player_booked pb
+LEFT JOIN (SELECT DISTINCT player_id, COUNT(*) AS total_booking
+		   FROM tb_player_booked
+		   GROUP BY player_id) pb
 	ON pm.player_id = pb.player_id
 LEFT JOIN tb_match_captain mp
 	ON pm.player_id = mp.player_captain
-INNER JOIN tb_team_coaches tc
-	ON pm.team_id = tc.team_id
-INNER JOIN tb_coach_mast cm
-	ON tc.coach_id = cm.coach_id
-GROUP BY player, country, jersey, position, age, club, captain, coach;
+GROUP BY pm.player_id, player, jersey, position, age, club, captain, country;
 
 
 CREATE VIEW vw_general_venue AS
@@ -45,3 +57,40 @@ INNER JOIN tb_soccer_venue sv
 INNER JOIN tb_match_mast mm
 	ON sv.venue_id = mm.venue_id
 GROUP BY venue_name, city, aud_capacity;
+
+
+CREATE VIEW vw_general_teams AS
+SELECT
+	country_name,
+	coach_name coach,
+    team_group,
+    won,
+    draw,
+    lost,
+    goal_for,
+    goal_agnst,
+    CASE
+		WHEN pb.booking IS NULL THEN 0
+        ELSE pb.booking
+    END booking,
+    CASE
+		WHEN io.changes IS NULL THEN 0
+        ELSE io.changes
+    END changes,
+    group_position
+FROM tb_soccer_team st
+INNER JOIN tb_soccer_country sc
+	ON st.team_id = sc.country_id
+LEFT JOIN (SELECT team_id, COUNT(*) booking
+		   FROM tb_player_booked
+           GROUP BY team_id) pb
+	ON st.team_id = pb.team_id
+LEFT JOIN (SELECT team_id, COUNT(*) changes
+		   FROM tb_player_in_out
+           WHERE in_out = 'I'
+           GROUP BY team_id) io
+	ON io.team_id = pb.team_id
+INNER JOIN tb_team_coaches tc
+	ON st.team_id = tc.team_id
+INNER JOIN tb_coach_mast cm
+	ON tc.coach_id = cm.coach_id;
